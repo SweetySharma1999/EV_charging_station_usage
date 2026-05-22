@@ -1,0 +1,17 @@
+// Total volume of distinct vehicles charged across selected filters
+Total Vehicles Charged = SUM('ev_charging_station_usage_grid_load'[vehicles_charged])
+
+// Arithmetic mean of vehicles arriving per session
+Avg Vehicles Per Session = AVERAGE('ev_charging_station_usage_grid_load'[vehicles_charged])
+
+// Overall average processing time across system charging hardware
+Avg Charging Duration (Min) = AVERAGE('ev_charging_station_usage_grid_load'[avg_charging_duration_minutes])
+
+// Total electric power output delivery tracking
+Total Energy Dispensed (kWh) = SUM('ev_charging_station_usage_grid_load'[energy_dispensed_kwh])
+
+// System structural demand stress baseline tracking
+Avg Grid Load (MW) = AVERAGE('ev_charging_station_usage_grid_load'[grid_load_mw])
+
+// Sustainability penetration metric tracker
+Avg Renewable Energy % = AVERAGE('ev_charging_station_usage_grid_load'[renewable_energy_used_percent])
